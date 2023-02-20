@@ -1,3 +1,4 @@
+from datetime import date
 import math
 from classes.vehicle_info import VehicleInfo
 from classes.passenger_vehicles import PassengerVehicle
@@ -43,8 +44,8 @@ class Trucks(VehicleInfo):
 
 
 
-trucks = Trucks(km_per_year=95876, number=100, fuel_type='dysel', fixed_costs=14500, technical_inspection_dates=2, driving_licence_category='B',
-                fuel_consumption=32, insurance_date='2022-05-01',weight_capacity=12, trailer=False,
+trucks = Trucks(km_per_year=95876, number=100, fuel_type='dysel', fixed_costs=14500, technical_inspection_dates=date(year=2023, month=7, day=31), driving_licence_category='smtgh',
+                fuel_consumption=32, insurance_date=date(year=2023, month=5, day=31),weight_capacity=12, trailer=False,
                 trailer_weight_capacity=5)
 # print(trucks.giving_costs(distance=650, current_fuel_price=1.7))
 print(trucks.counting_capacity(20))
